@@ -9,6 +9,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBAction func didTapLogin(_ sender: UIButton) {
+    }
+    
+    
 }
 
