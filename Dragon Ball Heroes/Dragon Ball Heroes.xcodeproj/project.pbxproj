@@ -16,9 +16,9 @@
 		076DE2872ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2862ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift */; };
 		076DE2892ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2882ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift */; };
 		076DE2962ABB4BDA00EBB136 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2952ABB4BDA00EBB136 /* LoginViewController.xib */; };
-		076DE29D2ABD019600EBB136 /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE29B2ABD019600EBB136 /* CharactersViewController.swift */; };
-		076DE29E2ABD019600EBB136 /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE29C2ABD019600EBB136 /* CharactersViewController.xib */; };
-		076DE2A12ABD071300EBB136 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2A02ABD071300EBB136 /* Character.swift */; };
+		076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE29B2ABD019600EBB136 /* HeroesViewController.swift */; };
+		076DE29E2ABD019600EBB136 /* HeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE29C2ABD019600EBB136 /* HeroesViewController.xib */; };
+		076DE2A12ABD071300EBB136 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2A02ABD071300EBB136 /* Hero.swift */; };
 		076DE2A52ABDCCE700EBB136 /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DE2A32ABDCCE700EBB136 /* HeroesTableViewCell.swift */; };
 		076DE2A62ABDCCE700EBB136 /* HeroesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 076DE2A42ABDCCE700EBB136 /* HeroesTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -54,9 +54,9 @@
 		076DE2862ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_Ball_HeroesUITests.swift; sourceTree = "<group>"; };
 		076DE2882ABB4ABC00EBB136 /* Dragon_Ball_HeroesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon_Ball_HeroesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		076DE2952ABB4BDA00EBB136 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		076DE29B2ABD019600EBB136 /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
-		076DE29C2ABD019600EBB136 /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
-		076DE2A02ABD071300EBB136 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		076DE29B2ABD019600EBB136 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		076DE29C2ABD019600EBB136 /* HeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesViewController.xib; sourceTree = "<group>"; };
+		076DE2A02ABD071300EBB136 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		076DE2A32ABDCCE700EBB136 /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
 		076DE2A42ABDCCE700EBB136 /* HeroesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,8 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				076DE2A22ABDCC7000EBB136 /* Cells */,
-				076DE29B2ABD019600EBB136 /* CharactersViewController.swift */,
-				076DE29C2ABD019600EBB136 /* CharactersViewController.xib */,
+				076DE29B2ABD019600EBB136 /* HeroesViewController.swift */,
+				076DE29C2ABD019600EBB136 /* HeroesViewController.xib */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 		076DE29F2ABD06E000EBB136 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				076DE2A02ABD071300EBB136 /* Character.swift */,
+				076DE2A02ABD071300EBB136 /* Hero.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,7 +289,7 @@
 				076DE2722ABB4ABC00EBB136 /* LaunchScreen.storyboard in Resources */,
 				076DE2A62ABDCCE700EBB136 /* HeroesTableViewCell.xib in Resources */,
 				076DE2962ABB4BDA00EBB136 /* LoginViewController.xib in Resources */,
-				076DE29E2ABD019600EBB136 /* CharactersViewController.xib in Resources */,
+				076DE29E2ABD019600EBB136 /* HeroesViewController.xib in Resources */,
 				076DE26F2ABB4ABC00EBB136 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,11 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				076DE2A12ABD071300EBB136 /* Character.swift in Sources */,
+				076DE2A12ABD071300EBB136 /* Hero.swift in Sources */,
 				076DE2A52ABDCCE700EBB136 /* HeroesTableViewCell.swift in Sources */,
 				076DE26A2ABB4ABB00EBB136 /* LoginViewController.swift in Sources */,
 				076DE2662ABB4ABB00EBB136 /* AppDelegate.swift in Sources */,
-				076DE29D2ABD019600EBB136 /* CharactersViewController.swift in Sources */,
+				076DE29D2ABD019600EBB136 /* HeroesViewController.swift in Sources */,
 				076DE2682ABB4ABB00EBB136 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

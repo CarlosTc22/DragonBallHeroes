@@ -21,7 +21,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="8xB-Cc-Jxc">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="8xB-Cc-Jxc">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-yQ-kp6">
@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="50" id="cfy-9p-ZwT"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" textContentType="email"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-bA-yTH">
                     <rect key="frame" x="40" y="401" width="313" height="50"/>
@@ -42,12 +42,12 @@
                         <constraint firstAttribute="height" constant="50" id="21p-3A-ng0"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R74-fI-SLU">
-                    <rect key="frame" x="159" y="471" width="75" height="50"/>
+                    <rect key="frame" x="40" y="471" width="313" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="75" id="Axo-kn-c4F"/>
+                        <constraint firstAttribute="width" constant="313" id="Axo-kn-c4F"/>
                         <constraint firstAttribute="height" constant="50" id="Gdn-gy-6Vh"/>
                     </constraints>
                     <state key="normal" title="Button"/>

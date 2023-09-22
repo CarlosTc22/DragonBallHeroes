@@ -16,9 +16,9 @@ class LoginViewController: UIViewController {
     @IBAction func didTapLogin(_ sender: UIButton) {
         guard let username = usernameTextField.text, let password = passwordTextField.text else {return }
         
-        let characters = CharactersViewController()
-        characters.title = "Heroes"
-        let navigationController = UINavigationController(rootViewController: characters)
+        let heroes = HeroesViewController()
+        heroes.title = "Heroes"
+        let navigationController = UINavigationController(rootViewController: heroes)
         
         self.view.window?.rootViewController = navigationController
         //Api
