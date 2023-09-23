@@ -11,8 +11,8 @@ class HeroesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private var heroes: [Hero] = [Hero(name: "Goku", description: "djiagdpijadpiapjiagapijgapgjpjapjpsfapjf", image: nil),
-                                  Hero(name: "Vegeta", description: "lorem ijpdaigiadgaspipaspsajpagspjpsjasapijjpifg", image: nil)]
+    private var heroes: [Hero] = [Hero(name: "Goku", description: "djiagdpijadpiapjiagapijgapgjpjapjpsdsfsgsgsgsdgsdgsdfapjfdjiagdpijadpiapjiagapijgapgjpjapjpsdsfsgsgsgsdgsdgsdfapjfdjiagdpijadpiapjiagapijgapgjpjapjpsdsfsgsgsgsdgsdgsdfapjf", image: URL(string: "https://elcomercio.pe/resizer/gj5JbwxkmqRAa4HSpfOHEIUBf7k=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/6FUBT6XQXNHHNFOMCHIT7I34NA.jpg")),
+                                  Hero(name: "Vegeta", description: "lorem ijpdaigiadgaspipaspsajpagspjpsjasapijjpifg", image: URL(string: "https://elcomercio.pe/resizer/5ybedS4m6BHrNsP3-0QoZsSkPHU=/580x330/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/YVDKLIO6LVBB5BF2CN5DYPEYGA.jpg"))]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,8 @@ extension HeroesViewController: UITableViewDataSource {
 
 
 extension HeroesViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let hero = heroes  [indexPath.row]
+    }
 }
 
