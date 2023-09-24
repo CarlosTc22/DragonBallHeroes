@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroesDetailViewController" customModule="Dragon_Ball_Heroes" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeroesDetailViewController" customModule="Fundamentos_iOS" customModuleProvider="target">
             <connections>
-                <outlet property="heroDescriptionLabel" destination="qf7-z2-b40" id="6r5-TL-Qqy"/>
-                <outlet property="heroImageView" destination="Jd0-Qx-F0M" id="FfX-Ul-q5b"/>
-                <outlet property="heroNameLabel" destination="5ze-Wi-P4P" id="6iZ-BC-ZDF"/>
+                <outlet property="button" destination="EGg-bz-OOI" id="LhI-WJ-Mkq"/>
+                <outlet property="heroDescLabel" destination="ezK-SA-n1b" id="S5Y-Mz-5Gf"/>
+                <outlet property="heroImageView" destination="shU-qT-ddx" id="9Og-Or-nOA"/>
+                <outlet property="heroNameLabel" destination="lJL-rB-UbS" id="CU0-J2-5Dn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,40 +23,54 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jd0-Qx-F0M">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="shU-qT-ddx">
                     <rect key="frame" x="0.0" y="59" width="393" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="AG5-8q-98Z"/>
+                        <constraint firstAttribute="height" constant="200" id="X8c-gQ-hWE"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ze-Wi-P4P">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJL-rB-UbS">
                     <rect key="frame" x="20" y="267" width="353" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-z2-b40">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ezK-SA-n1b">
                     <rect key="frame" x="20" y="296" width="353" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGg-bz-OOI">
+                    <rect key="frame" x="20" y="768" width="353" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ugg-hH-rKN"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="didSelectButton:" destination="-1" eventType="touchUpInside" id="lA1-zQ-FSG"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Jd0-Qx-F0M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4GU-KA-1BQ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qf7-z2-b40" secondAttribute="bottom" constant="501" id="6yQ-Kx-oPa"/>
-                <constraint firstItem="Jd0-Qx-F0M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DJp-5t-LGd"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5ze-Wi-P4P" secondAttribute="trailing" constant="20" id="Kc6-g0-J13"/>
-                <constraint firstItem="5ze-Wi-P4P" firstAttribute="top" secondItem="Jd0-Qx-F0M" secondAttribute="bottom" constant="8" symbolic="YES" id="Lis-SX-RoR"/>
-                <constraint firstItem="qf7-z2-b40" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="MFR-hd-mI6"/>
-                <constraint firstItem="5ze-Wi-P4P" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Z8y-gS-jVA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qf7-z2-b40" secondAttribute="trailing" constant="20" id="dvz-Dx-e9l"/>
-                <constraint firstItem="qf7-z2-b40" firstAttribute="top" secondItem="5ze-Wi-P4P" secondAttribute="bottom" constant="8" symbolic="YES" id="fPc-p3-WK1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jd0-Qx-F0M" secondAttribute="trailing" id="sgJ-Xy-EIk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ezK-SA-n1b" secondAttribute="trailing" constant="20" id="942-D7-J9p"/>
+                <constraint firstItem="ezK-SA-n1b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HuW-UQ-EcG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="shU-qT-ddx" secondAttribute="trailing" id="Tvd-N6-TiU"/>
+                <constraint firstItem="ezK-SA-n1b" firstAttribute="top" secondItem="lJL-rB-UbS" secondAttribute="bottom" constant="8" symbolic="YES" id="WpH-g4-htp"/>
+                <constraint firstItem="EGg-bz-OOI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="X9a-Eq-E2V"/>
+                <constraint firstItem="shU-qT-ddx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XnD-BF-RfU"/>
+                <constraint firstItem="EGg-bz-OOI" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="hai-gw-RO6"/>
+                <constraint firstItem="lJL-rB-UbS" firstAttribute="top" secondItem="shU-qT-ddx" secondAttribute="bottom" constant="8" symbolic="YES" id="kUW-Ay-NTy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EGg-bz-OOI" secondAttribute="trailing" constant="20" id="lSd-oQ-3hg"/>
+                <constraint firstItem="shU-qT-ddx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="msQ-pc-Zsr"/>
+                <constraint firstItem="lJL-rB-UbS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pl0-wv-7XY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ezK-SA-n1b" secondAttribute="bottom" constant="20" id="rBO-xV-WUb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lJL-rB-UbS" secondAttribute="trailing" constant="20" id="rMc-YD-3hj"/>
             </constraints>
-            <point key="canvasLocation" x="131" y="-11"/>
+            <point key="canvasLocation" x="114" y="21"/>
         </view>
     </objects>
     <resources>

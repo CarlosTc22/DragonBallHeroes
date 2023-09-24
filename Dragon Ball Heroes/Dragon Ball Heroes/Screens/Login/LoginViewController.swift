@@ -8,22 +8,21 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+
+
     @IBAction func didTapLogin(_ sender: UIButton) {
-        guard let username = usernameTextField.text, let password = passwordTextField.text else {return }
-        
-        let heroes = HeroesViewController()
-        heroes.title = "Heroes"
+        guard let email = emailTextField.text, let password = passwordTextfield.text else { return }
+
+        // Llamada a la api
+        // Si todo va bien
+        let heroes = DragonBallHeroesViewController(nibName: "HeroesViewController", bundle: nil)
         let navigationController = UINavigationController(rootViewController: heroes)
-        
         self.view.window?.rootViewController = navigationController
-        //Api
-        
     }
-    
+
 }
 

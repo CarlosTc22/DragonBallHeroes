@@ -7,31 +7,31 @@
 
 import UIKit
 
-class HeroesTableViewCell: UITableViewCell {
-    @IBOutlet private(set) weak var heroImageView : UIImageView!
-    @IBOutlet private weak var heroNameLabel : UILabel!
-    @IBOutlet private weak var heroDescriptionLabel : UILabel!
+class HeroesCell: UITableViewCell {
+    @IBOutlet weak var heroNameLabel: UILabel!
+    @IBOutlet weak var heroDescLabel: UILabel!
+    @IBOutlet weak var heroImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         heroNameLabel.numberOfLines = .zero
         heroNameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
-        heroDescriptionLabel.numberOfLines = 4
-        heroDescriptionLabel.font = .systemFont(ofSize: 14, weight: .regular)
+        heroDescLabel.numberOfLines = .zero
+        heroDescLabel.font = .systemFont(ofSize: 14, weight: .regular)
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         heroImageView.image = nil
     }
-    
-    func configure(hero: Hero){
-        heroNameLabel.text = hero.name
-        heroDescriptionLabel.text = hero.description
-        
-        if let imageUrl = hero.image{
+
+    func configure(character: Character) {
+        heroNameLabel.text = character.title
+        heroDescLabel.text = character.description
+
+        if let imageUrl = character.url {
             DispatchQueue.global(qos: .userInteractive).async {
-                if let data = try?Data(contentsOf: imageUrl) {
+                if let data = try? Data(contentsOf: imageUrl) {
                     DispatchQueue.main.async { [weak self] in
                         self?.heroImageView.image = UIImage(data: data)
                     }

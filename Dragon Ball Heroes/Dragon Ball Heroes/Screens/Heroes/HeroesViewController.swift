@@ -10,49 +10,49 @@ import UIKit
 class HeroesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    private var heroes: [Hero] = [Hero(name: "Goku", description: "djiagdpijadpiapjiagapijgapgjpjapjpsdsfsgsgsgsdgsdgsdfapjfdjiagdpijadpiapjiagapijgapgjpjapjpsdsfsgsgsgsdgsdgsdfapjfdjiagdpijadpiapjiagapijgapgjpjapjpsdsfsgsgsgsdgsdgsdfapjf", image: URL(string: "https://elcomercio.pe/resizer/gj5JbwxkmqRAa4HSpfOHEIUBf7k=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/6FUBT6XQXNHHNFOMCHIT7I34NA.jpg")),
-                                  Hero(name: "Vegeta", description: "lorem ijpdaigiadgaspipaspsajpagspjpsjasapijjpifg", image: URL(string: "https://elcomercio.pe/resizer/5ybedS4m6BHrNsP3-0QoZsSkPHU=/580x330/smart/filters:format(jpeg):quality(90)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/YVDKLIO6LVBB5BF2CN5DYPEYGA.jpg"))]
+
+    var characters: [Character] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Heroes"
-        tableView.register(UINib(nibName: "HeroesTableViewCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
+        tableView.register(UINib(nibName: "HeroesCell", bundle: nil), forCellReuseIdentifier: "HeroCell")
     }
+
 }
 
+// MARK: - UITableViewDataSource
 extension HeroesViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        heroes.count
+        characters.count
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let hero = heroes[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell") as? HeroesTableViewCell else {return UITableViewCell()}
-        cell.configure(hero: hero)
+        let character = characters[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HeroCell") as? HeroesCell else { return UITableViewCell() }
+        cell.configure(character: character)
         cell.accessoryType = .disclosureIndicator
         return cell
     }
-    
+
 }
 
-
+// MARK: - UITableViewDelegate
 extension HeroesViewController: UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let hero = heroes[indexPath.row]
+        let character = characters[indexPath.row]
         var image: UIImage?
-        if let cell = tableView.cellForRow(at: indexPath) as? HeroesTableViewCell {
+        if let cell = tableView.cellForRow(at: indexPath) as? HeroesCell {
             image = cell.heroImageView.image
         }
 
-        let heroDetail = HeroesDetailViewController(hero: hero, image: image)
+        let heroDetail = HeroesDetailViewController(character: character, image: image)
         navigationController?.pushViewController(heroDetail, animated: true)
     }
 }
-
