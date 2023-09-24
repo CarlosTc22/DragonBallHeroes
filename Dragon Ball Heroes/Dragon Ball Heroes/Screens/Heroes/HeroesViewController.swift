@@ -43,8 +43,16 @@ extension HeroesViewController: UITableViewDataSource {
 
 
 extension HeroesViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let hero = heroes  [indexPath.row]
+        let hero = heroes[indexPath.row]
+        var image: UIImage?
+        if let cell = tableView.cellForRow(at: indexPath) as? HeroesTableViewCell {
+            image = cell.heroImageView.image
+        }
+
+        let heroDetail = HeroesDetailViewController(hero: hero, image: image)
+        navigationController?.pushViewController(heroDetail, animated: true)
     }
 }
 

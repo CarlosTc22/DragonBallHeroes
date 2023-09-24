@@ -8,7 +8,7 @@
 import UIKit
 
 class HeroesTableViewCell: UITableViewCell {
-    @IBOutlet private weak var heroImageView : UIImageView!
+    @IBOutlet private(set) weak var heroImageView : UIImageView!
     @IBOutlet private weak var heroNameLabel : UILabel!
     @IBOutlet private weak var heroDescriptionLabel : UILabel!
     
