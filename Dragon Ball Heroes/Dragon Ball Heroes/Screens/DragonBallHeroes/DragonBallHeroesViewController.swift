@@ -13,6 +13,7 @@ class DragonBallHeroesViewController: HeroesViewController {
         super.viewDidLoad()
         DragonBallHero.fetchCharacter { character in
             self.characters = character
+            self.tableView.reloadData()
         }
     }
 }

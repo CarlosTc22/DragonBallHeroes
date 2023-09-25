@@ -8,10 +8,10 @@
 import Foundation
 
 struct Transformation: Character {
+    var id: String = ""
     var url: URL?
     var title: String
     var description: String
-    var transformations: [Transformation] = []
 
     init(url: URL? = nil, title: String, description: String) {
         self.url = url

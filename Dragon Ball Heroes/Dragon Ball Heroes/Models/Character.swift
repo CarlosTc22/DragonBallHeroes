@@ -8,12 +8,10 @@
 import Foundation
 
 protocol Character {
+    var id: String { get }
     var url: URL? { get }
     var title: String { get }
     var description: String { get }
-    var transformations: [Transformation] { get }
 
-    static func fetchCharacter(completion: ([Self]) -> Void)
+    static func fetchCharacter(completion: @escaping ([Self]) -> Void)
 }
-
-
