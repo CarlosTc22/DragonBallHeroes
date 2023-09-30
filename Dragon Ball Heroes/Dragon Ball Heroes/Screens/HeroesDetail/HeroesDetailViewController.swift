@@ -30,20 +30,20 @@ class HeroesDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = character.title
-        configureButton()
         heroDescLabel.numberOfLines = .zero
+        configureButton()
         updateUI()
         let client = HTTPClient()
         client.fetchTransformations(requestData: TransformationRequest(id: character.id)) { result in
             switch result {
             case .success(let transformations):
+                self.button.isHidden = false
                 self.transformations = transformations.map { transformation in
                     Transformation(url: URL(string: transformation.photo), title: transformation.name, description: transformation.description)
                 }
                 self.button.isHidden = self.transformations.count == .zero
             case .failure(let error):
                 print("Error fetching transformations: \(error)")
-                self.button.isHidden = true
             }
         }
     }
@@ -66,6 +66,7 @@ private extension HeroesDetailViewController {
     }
 
     func configureButton() {
+        button.isHidden = true
         button.backgroundColor = .systemBlue
         button.setTitle("Transformaciones", for: .normal)
         button.setTitleColor(.white, for: .normal)

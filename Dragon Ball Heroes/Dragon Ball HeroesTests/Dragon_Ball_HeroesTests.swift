@@ -29,5 +29,26 @@ final class Dragon_Ball_HeroesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testDragonBallHeroInitialization() {
+            let heroData = """
+            {
+                "id": "123",
+                "name": "Goku",
+                "description": "A Saiyan hero",
+                "photo": "https://example.com/goku.jpg"
+            }
+            """.data(using: .utf8)!
 
+            let decoder = JSONDecoder()
+            do {
+                let hero = try decoder.decode(DragonBallHeroResponse.self, from: heroData)
+                XCTAssertEqual(hero.id, "123")
+                XCTAssertEqual(hero.name, "Goku")
+                XCTAssertEqual(hero.description, "A Saiyan hero")
+                XCTAssertEqual(hero.photo, "https://example.com/goku.jpg")
+            } catch {
+                XCTFail("Decoding failed with error: \(error)")
+            }
+        }
 }
