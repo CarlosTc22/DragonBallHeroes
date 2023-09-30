@@ -42,16 +42,13 @@ class HeroesDetailViewController: UIViewController {
                 }
                 self.button.isHidden = self.transformations.count == .zero
             case .failure(let error):
-                // Puedes manejar el error aquí, por ejemplo, mostrando un mensaje al usuario
                 print("Error fetching transformations: \(error)")
+                self.button.isHidden = true
             }
         }
     }
     
     @IBAction func didSelectButton(_ sender: UIButton) {
-        // Suponiendo que el nombre del héroe es único y se puede usar para obtener sus transformaciones
-        
-        
        
         let transformationsVC = TransformationsViewController(transformations: self.transformations)
             self.navigationController?.pushViewController(transformationsVC, animated: true)

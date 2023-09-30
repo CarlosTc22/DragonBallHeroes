@@ -51,7 +51,7 @@
                         <constraint firstAttribute="height" constant="50" id="Gdn-gy-6Vh"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Login"/>
                     <connections>
                         <action selector="didTapLogin:" destination="-1" eventType="touchUpInside" id="xIE-9V-4ur"/>
                     </connections>
